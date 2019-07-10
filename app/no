@@ -1,0 +1,87 @@
+Microsoft Windows [版本 10.0.17763.557]
+(c) 2018 Microsoft Corporation。保留所有权利。
+
+C:\Users\ASUS>adb shell am start -S -R 10 -W com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 261
+TotalTime: 261
+WaitTime: 277
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 268
+TotalTime: 268
+WaitTime: 284
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 276
+TotalTime: 276
+WaitTime: 289
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 263
+TotalTime: 263
+WaitTime: 277
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 282
+TotalTime: 282
+WaitTime: 300
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 279
+TotalTime: 279
+WaitTime: 292
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 269
+TotalTime: 269
+WaitTime: 294
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 268
+TotalTime: 268
+WaitTime: 284
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 290
+TotalTime: 290
+WaitTime: 306
+Complete
+Stopping: com.saicmotor.tocapp
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity }
+Status: ok
+Activity: com.saicmotor.tocapp/com.saicmotor.common.activity.WelcomeActivity
+ThisTime: 265
+TotalTime: 265
+WaitTime: 282
+Complete
+
+
+288.5
