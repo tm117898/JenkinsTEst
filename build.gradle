@@ -1,23 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-
-    if (project.hasProperty('findBugs') && project.property("findBugs").toBoolean()) {
-        apply plugin: 'findbugs'
-        task findbugs(type: FindBugs) {
-            //excludeFilter file('findbugs-filter.xml')
-            classes = fileTree('build/intermediates/classes/debug')
-            source = fileTree('src/main/java/')
-            classpath = files()
-            effort = 'max'
-            reports {
-                xml.enabled false
-                html.enabled true
-                html.stylesheet resources.text.fromFile('findbugs-template.xsl')
-            }
-        }
-    }
-
     repositories {
         google()
         jcenter()
