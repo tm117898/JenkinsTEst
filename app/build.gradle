@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 if (project.hasProperty('findBugs') && project.property("findBugs").toBoolean()) {
+
+    println "findBugs=${project.property("findBugs")}"
+
     apply plugin: 'findbugs'
     task findbugs(type: FindBugs) {
         //excludeFilter file('findbugs-filter.xml')
