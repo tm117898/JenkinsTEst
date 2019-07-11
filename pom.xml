@@ -1,50 +1,37 @@
-<build>
-<plugins>        
-    <!-- 配置静态代码检查包括checkStyle、findBugs、pmd -->
-            <!-- 配置checkStyle代码规范检查 -->
-         <!--     <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.10</version>
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                </configuration>
-            </plugin>-->
-            <!-- 配置findbugs对编译文件中可能出现的问题在运行前进行检查 -->
-              <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.1</version>
-                <configuration>
-                    <threshold>High</threshold>
-                    <effort>Default</effort>
-                    <findbugsXmlOutput>true</findbugsXmlOutput>
-                    <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-                    <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
-                </configuration>
-              </plugin>
-              <!-- 配置pmd对java源文件进行检查，检测出可以优化的代码 -->
-              <!-- <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-pmd-plugin</artifactId>
-                    <version>3.5</version>
-               </plugin>   -->
-        </plugins>
-    </build>
-    <reporting>
-    <plugins>
-         <!-- 如果要生成findbugs.html的话需要放到这里面 -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <build>
         <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>3.0.1</version>
+            <configuration>
+                <threshold>High</threshold>
+                <effort>Default</effort>
+                <findbugsXmlOutput>true</findbugsXmlOutput>
+                <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+                <xmlOutput>true</xmlOutput>
+                <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
+            </configuration>
+        </plugin>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>3.0.1</version>
                 <configuration>
-                    <threshold>High</threshold>
-                    <effort>Default</effort>
+                    <xmlOutput>true</xmlOutput>
+                    聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽 <!-- Optional directoryto put findbugs xdoc xml report -->
+                    聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽聽 <!--<xmlOutputDirectory>target/site</xmlOutputDirectory>-->
                     <findbugsXmlOutput>true</findbugsXmlOutput>
                     <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-                    <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
                 </configuration>
-              </plugin>
-              </plugins>
+            </plugin>
+        </plugins>
     </reporting>
+</project>
