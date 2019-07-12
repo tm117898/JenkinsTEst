@@ -12,10 +12,12 @@ public class WelcomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String s = null;
-        s.toCharArray();
-
-        int[] i = {1, 2, 3};
-        int i2 = i[4];
+//        String s1 = null;
+//        s1.toCharArray();
+//
+//        String s = "";
+//        for (int i = 0; i < 5; ++i) {
+//            s = s + i;
+//        }
     }
 }

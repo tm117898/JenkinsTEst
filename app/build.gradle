@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
-def findBugs = project.hasProperty('findBugs') && project.property("findBugs").toBoolean()
-//def findBugs = true
+//def findBugs = project.hasProperty('findBugs') && project.property("findBugs").toBoolean()
+def findBugs = true
 
 if (findBugs) {
     apply plugin: 'findbugs'
@@ -10,26 +10,28 @@ if (findBugs) {
 project.afterEvaluate {
     println 'project.afterEvaluate'
 
-    task findbugs(type: FindBugs) {
-        ignoreFailures = false
-        effort = "max"
-        reportLevel = "high"
+    if (findBugs) {
+        task findbugs(type: FindBugs) {
+            ignoreFailures = false
+            effort = "max"
+            reportLevel = "high"
 //    excludeFilter = new File("${project.rootDir}/check_config/findbugs.xml")//这里是配置的校验文件目录；
-        classes = files("${project.rootDir}/app/build/intermediates/javac")
-        source = files("${project.rootDir}/app/src/main/java")
-        include '**/*.java'
-        exclude '**/gen/**'
-        reports {
-            xml.enabled = false
-            html.enabled = true
-            xml {
-                destination "$reportsDir/findbugs/findbugs.xml" //这里是报告产生的路径
+            classes = files("${project.rootDir}/app/build/intermediates/javac")
+            source = files("${project.rootDir}/app/src/main/java")
+            include '**/*.java'
+            exclude '**/gen/**'
+            reports {
+                xml.enabled = false
+                html.enabled = true
+                xml {
+                    destination "$reportsDir/findbugs/findbugs.xml" //这里是报告产生的路径
+                }
+                html {
+                    destination "$reportsDir/findbugs/findbugs.html" //这里是报告产生的路径
+                }
             }
-            html {
-                destination "$reportsDir/findbugs/findbugs.html" //这里是报告产生的路径
-            }
+            classpath = files()
         }
-        classpath = files()
     }
 }
 
