@@ -7,6 +7,8 @@ import com.cesc.shang.R;
 
 public class WelcomeActivity extends Activity {
 
+    int adb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

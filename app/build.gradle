@@ -1,14 +1,26 @@
 apply plugin: 'com.android.application'
 
-//def findBugs = project.hasProperty('findBugs') && project.property("findBugs").toBoolean()
-def findBugs = true
+def findBugs = project.hasProperty('findBugs') && project.property("findBugs").toBoolean()
+//def findBugs = true
+//def checkStyle = project.hasProperty('checkStyle') && project.property("checkStyle").toBoolean()
+def checkStyle = true
 
 if (findBugs) {
     apply plugin: 'findbugs'
 }
+if (checkStyle) {
+    apply plugin: 'checkstyle'
+}
 
 project.afterEvaluate {
-    println 'project.afterEvaluate'
+    if (checkStyle) {
+        task checkstyle(type: Checkstyle) {
+            configFile = file("checkStyle.xml")
+            source = fileTree('src')
+            ignoreFailures = true
+            classpath = files()
+        }
+    }
 
     if (findBugs) {
         task findbugs(type: FindBugs) {
