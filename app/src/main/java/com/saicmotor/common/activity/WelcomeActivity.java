@@ -14,5 +14,8 @@ public class WelcomeActivity extends Activity {
 
         String s = null;
         s.toCharArray();
+
+        int[] i = {1, 2, 3};
+        int i2 = i[4];
     }
 }
